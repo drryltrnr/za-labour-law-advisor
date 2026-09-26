@@ -6,12 +6,29 @@ A Claude skill for navigating South African statutory labour disputes: workplace
 
 The skill loads whenever a conversation touches South African labour law — even if the user doesn't name the specific Act. It cross-references:
 
-- **BCEA** (Basic Conditions of Employment Act) — deductions, working hours, sectoral agreements
-- **COIDA** (Compensation for Occupational Injuries and Diseases Act) — injury-on-duty compensation, employer obligations, unlawful clawbacks, enforcement channels
-- **CCMA** — jurisdiction, forms, referral timelines
+- **BCEA / NMWA** — deductions and clawbacks, working hours, termination entitlements, minimum wage
+- **COIDA** (as amended by Act 10 of 2022) — injury-on-duty compensation, employer obligations, unlawful clawbacks, penalties, enforcement channels
+- **LRA / CCMA** — jurisdiction, forms, referral timelines, and the full constructive dismissal procedure
+- **UIA** — what an injured worker keeps or loses by resigning, including UIF unemployment benefits
 - **SARS / UIF** — PAYE and UIF misclassification, statutory tax exemptions on injury compensation
+- **MEIBC / MIBFA** — bargaining council extension notices, levies, benefit funds and Pension Funds Act s 13A, for the metal and engineering sector
+
+It also answers the three questions an injured worker asks once a claim stalls — can I earn elsewhere, can I leave, and is leaving a constructive dismissal — as one plan, and tells the user plainly when a matter needs a practitioner (Legal Aid SA, SASLAW Pro Bono, law clinics).
 
 It's built around a verification discipline: statutory section numbers are easy to cite confidently and wrongly, so the skill instructs Claude to check every citation against primary text before it goes into anything a person will actually sign or serve — and it documents several specific, easy-to-make citation mistakes (e.g. COIDA Section 63 vs. Section 47(1)(a)/Schedule 4, Section 64's narrow scope) so they aren't repeated.
+
+## Structure
+
+```
+skills/za-labour-law-advisor/
+├── SKILL.md                         core protocol: verification, BCEA, COIDA, LRA, EEA, escalation
+└── references/
+    ├── injured-worker-exit.md       earning while on TTD, resigning, constructive dismissal
+    ├── meibc-mibfa.md               MEIBC, MIBFA, Pension Funds Act s 13A
+    └── sars-paye-uif.md             PAYE, UIF, SARS channels
+```
+
+Reference files load only when the facts call for them, so users outside the metal and engineering sector don't carry the MEIBC material.
 
 ## Who it's for
 

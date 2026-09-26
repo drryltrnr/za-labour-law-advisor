@@ -1,7 +1,7 @@
 {
   "name": "za-labour-law-advisor",
-  "version": "0.1.1",
-  "description": "Expert strategic analysis, legal text auditing, and administrative document drafting aligned with South African statutory labour frameworks (BCEA, LRA, COIDA, CCMA, and SARS PAYE/UIF rules).",
+  "version": "0.2.0",
+  "description": "Strategic analysis, legal text auditing and document drafting for South African statutory labour frameworks (BCEA, LRA, COIDA, EEA, UIA, CCMA and bargaining council rules, SARS PAYE/UIF), with MEIBC/MIBFA reference files for the metal and engineering sector.",
   "license": "MIT",
   "keywords": [
     "south-africa",
@@ -10,6 +10,9 @@
     "bcea",
     "ccma",
     "workplace-injury",
-    "payroll-compliance"
+    "payroll-compliance",
+    "constructive-dismissal",
+    "uif",
+    "meibc"
   ]
 }
