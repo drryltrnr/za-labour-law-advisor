@@ -1,0 +1,54 @@
+name: Release
+
+# Publishes a GitHub release for a v* tag, with the plugin and skill packages
+# built by scripts/build_plugin.py. Release notes come from the tag message.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing tag to (re)publish, e.g. v0.3.0
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: refs/tags/${{ env.TAG }}
+
+      - name: Check the manifest version matches the tag
+        run: |
+          version="v$(python3 -c 'import json; print(json.load(open(".claude-plugin/plugin.json"))["version"])')"
+          if [ "$version" != "$TAG" ]; then
+            echo "::error::plugin.json version $version does not match tag $TAG"
+            exit 1
+          fi
+
+      - name: Build the plugin and skill packages
+        run: python3 scripts/build_plugin.py
+
+      - name: Release notes from the tag message
+        run: |
+          git fetch --force origin "refs/tags/$TAG:refs/tags/$TAG"
+          git for-each-ref "refs/tags/$TAG" --format='%(contents)' > notes.md
+          [ -s notes.md ] || echo "Release $TAG" > notes.md
+          cat notes.md
+
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          assets="dist/za-labour-law-advisor.plugin dist/za-labour-law-advisor.skill"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" $assets --clobber
+          else
+            gh release create "$TAG" $assets --verify-tag --title "$TAG" --notes-file notes.md
+          fi

@@ -31,6 +31,8 @@ Download `za-labour-law-advisor.plugin` from the [latest release](https://github
 
 To build the packages yourself, run `python3 scripts/build_plugin.py`. It writes `dist/za-labour-law-advisor.plugin` (manifest, README, LICENSE and every file under `skills/`) and `dist/za-labour-law-advisor.skill` (the skill folder alone — `SKILL.md` plus `references/` — for a Claude **Save skill** upload), and refuses to build if `SKILL.md` points to a reference file that is missing.
 
+Releases are published by `.github/workflows/release.yml`: pushing a `v*` tag builds both packages and attaches them to a GitHub release, using the tag message as the release notes. The tag must match the version in `.claude-plugin/plugin.json`.
+
 ## Disclaimer
 
 This skill provides legal information and drafting assistance, not legal advice from a qualified attorney. Statutory references should always be independently verified, and users with high-stakes matters should consult a South African labour law attorney.
