@@ -235,6 +235,7 @@ PAYE is an annual tax collected cumulatively, so removing exempt income from lat
 
 * **Contributions** — contributions are levied on remuneration; COIDA compensation is not remuneration for services rendered. Audit non-registration, over-deduction and unremitted contributions against the current ceiling, fetched per Section 1.E.
 * **Benefits after termination** — unemployment benefit entitlement turns on the reason for unemployment (Unemployment Insurance Act 63 of 2001, s 16(1)(a)). See Section 3.B before any resignation goes out.
+* **Enforcement — the UIA has its own chapter; don't borrow the BCEA's.** A UIA contravention is enforced under **UIA Chapter 4**: **s 38** — the inspector must endeavour to secure the employer's written undertaking to comply, and may seek agreement on any amount owed to the Fund under the UIC Act; **s 39** — compliance order for breach of an undertaking or of any provision of the UIA, setting out any amount the employer must pay to the Fund under the UIC Act; **s 40** — the employer's objection goes to the Director-General; **s 41** — the Director-General may apply to have the order made an order of the Labour Court. **s 42** makes the employer answerable for the correctness of every statement and item of information the Act requires it to keep and submit. Cite these for a UIA breach, not the BCEA's compliance order (s 69): the UIA takes only the inspector from the BCEA, through its definition of "labour inspector" (BCEA s 63). Benefit disputes run on a separate track — **s 37**, appeal to the Board's appeals committee, then arbitration at the CCMA.
 
 #### Choosing the right SARS channel — they are not interchangeable
 
@@ -318,7 +319,7 @@ Before telling a user that resignation is "safe" for compensation, confirm no am
 
 When the user is preparing something that will actually be sworn, filed or served, hunt the soft spot before the other side does:
 
-* **A citation that is topically close but textually wrong** — s 64 for a compensation clawback, s 63 for the 75% rate, s 47(3)(b) for a liability shift, s 32 for what s 32A did, a repealed paragraph such as s 32(1)(c). Read the provision before it goes in.
+* **A citation that is topically close but textually wrong** — s 64 for a compensation clawback, s 63 for the 75% rate, s 47(3)(b) for a liability shift, s 32 for what s 32A did, a repealed paragraph such as s 32(1)(c), BCEA s 69 for a UIA breach (Section 2.G). Read the provision before it goes in.
 * **A misquoted statutory period** — see s 39(1) above.
 * **A stale figure** — every threshold, rate, ceiling and tariff re-fetched per Section 1.E at the moment of drafting, with the notice cited.
 * **A figure attributed to a notice that does not contain it** — see Section 1.D.
