@@ -15,7 +15,7 @@ The skill loads whenever a conversation touches South African labour law — eve
 - **Prescription Act** — when a money claim prescribes and what interrupts it
 - **MEIBC / MIBFA** — sector modules for the metal and engineering industries: bargaining council extension notices, levies, benefit funds and Pension Funds Act s 13A
 
-The MEIBC/MIBFA/Pension Funds Act s 13A detail and the SARS/PAYE/UIF detail live in `skills/za-labour-law-advisor/references/`, loaded only when a matter triggers them, which keeps the core `SKILL.md` about 16% lighter. Package the whole skill folder, not `SKILL.md` alone.
+The MEIBC/MIBFA/Pension Funds Act s 13A detail and the SARS/PAYE/UIF detail live in `skills/za-labour-law-advisor/references/`, loaded only when a matter triggers them, which keeps the core `SKILL.md` about 16% lighter. They are part of the skill: the package must contain the whole skill folder (see Installing).
 
 It also plans a worker's exit — stay, resign, or claim constructive dismissal — with each consequence for UIF, the onus of proof and any open claim, and tells the user plainly when a matter needs a practitioner (Legal Aid SA, SASLAW Pro Bono, law clinics).
 
@@ -28,6 +28,8 @@ Any worker dealing with a South African employer dispute who wants Claude to rea
 ## Installing
 
 Download `za-labour-law-advisor.plugin` from the [latest release](https://github.com/drryltrnr/za-labour-law-advisor/releases/latest) and install it in Claude Cowork or Claude Code. Once installed, the skill activates automatically when a conversation matches its domain — no slash command needed.
+
+To build the package yourself, run `python3 scripts/build_plugin.py`. It writes `dist/za-labour-law-advisor.plugin` containing the manifest, README, LICENSE and every file under `skills/` — `SKILL.md` and its `references/` — and refuses to build if `SKILL.md` points to a reference file that is missing.
 
 ## Disclaimer
 
