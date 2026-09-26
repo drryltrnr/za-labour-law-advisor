@@ -1,6 +1,6 @@
 ---
 name: za-labour-law-advisor
-description: "Strategic analysis, legal text auditing and document drafting for South African statutory labour frameworks (BCEA, LRA, COIDA, EEA, NMWA, UIA, CCMA and bargaining council rules, SARS PAYE/UIF), with MEIBC and MIBFA reference files for the metal and engineering sector. Use for workplace injury (IOD/COIDA) claims, earning income or resigning while a claim is open, constructive dismissal, wage clawbacks and unlawful deductions, CCMA or bargaining council referrals, PAYE/UIF payroll disputes, pension-contribution non-remittance, or when drafting a letter of demand, affidavit, resignation letter or formal complaint against a South African employer. Every cited Act, amendment, commencement proclamation and gazetted figure is fetched and verified before use."
+description: "Strategic analysis, legal text auditing and document drafting for South African statutory labour frameworks (BCEA, LRA, COIDA, EEA, NMWA, UIA, CCMA and bargaining council rules, SARS PAYE/UIF), the MEIBC Main Collective Agreement and MIBFA benefit funds. Use for workplace injury (IOD/COIDA) claims, earning income or resigning while a claim is open, constructive dismissal, wage clawbacks and unlawful deductions, CCMA or bargaining council referrals, PAYE/UIF payroll disputes, pension-contribution non-remittance, or when drafting a letter of demand, affidavit, resignation letter or formal complaint against a South African employer. Every cited Act, amendment, commencement proclamation and gazetted figure is fetched and verified before use."
 ---
 
 # South African Labour Law & Statutory Compliance
@@ -12,21 +12,13 @@ Analysis of labour disputes, audits of employer payroll and statutory non-compli
 ## 0. Working Sequence
 
 1. **Run the Gazette cross-check (Section 1)** for every Act, regulation or collective agreement the dispute triggers — in-force text, amendment Acts, commencement proclamations, gazetted figures.
-2. **Classify the sector and load references.** Establish whether a bargaining council has jurisdiction, and load the reference files the facts trigger (table below) before going further.
+2. **Classify the sector.** Establish whether a bargaining council agreement binds the employer. In the metal and engineering sector apply Sections 2.E (MEIBC) and 2.F (MIBFA) rather than generic BCEA baselines.
 3. **Establish jurisdiction** — bargaining council, CCMA, DEL Inspectorate, Compensation Commissioner or licensee, Labour Court.
-4. **Identify the instruments triggered** — BCEA, LRA, COIDA as amended by Act 10 of 2022, EEA, UIA, Income Tax Act, any binding collective agreement.
-5. **Audit substantive compliance** — hours, overtime, wages, deductions, leave, injury reporting, compensation, fund remittance, PAYE/UIF treatment.
+4. **Identify the instruments triggered** — BCEA, LRA, COIDA as amended by Act 10 of 2022, EEA, UIA, Income Tax Act, any binding collective agreement (MEIBC Main Agreement; MIBFA fund agreements read with Pension Funds Act s 13A).
+5. **Audit substantive compliance** — hours, overtime, wages, deductions, leave, injury reporting, compensation, fund remittance, PAYE/UIF treatment; in the MEIBC sector also hours (40 vs BCEA 45), overtime multipliers, Rate A–H scales, Leave Enhancement Pay and short time.
 6. **Anticipate the next questions.** An injured worker whose claim has stalled asks next whether they may earn elsewhere, whether they can leave, and whether leaving is a constructive dismissal. Answer those together (Section 3) — each move changes the others.
 7. **Draft or review**, with full section, gazette and collective-agreement citations, naming personal director liability under PFA s 13A(8) where it arises.
 8. **Check escalation triggers (Section 6)** and embed the Gazette Verification & Statutory Audit Trail in the output.
-
-### Reference files — load only when triggered
-
-| File | Load when |
-| :--- | :--- |
-| `references/meibc-mibfa.md` | Employer is in the metal and engineering sector (MEIBC scope); the dispute touches council levies, bargaining council extension or renewal notices, MEIBC CDR jurisdiction or MIBFA funds; or pension/provident contributions were deducted but not paid over (Pension Funds Act s 13A) in any sector |
-| `references/injured-worker-exit.md` | An employee asks about earning income while a COIDA claim is open, resigning or what leaving costs, or constructive dismissal |
-| `references/sars-paye-uif.md` | PAYE withholding, UIF contributions, IRP5/EMP501 coding, tax treatment of compensation, the choice of SARS channel, or tax on new earnings taken on while a claim is open |
 
 ## 1. Universal Government Gazette Cross-Check Protocol
 
@@ -61,10 +53,10 @@ Run these patterns against Government Printing Works, the official departmental 
 | **BCEA s 6(3) earnings threshold** | `"earnings threshold" "Basic Conditions of Employment Act" "Government Gazette" "per annum"` |
 | **National Minimum Wage adjustment** | `"National Minimum Wage" "Government Gazette" "per hour" "effective" site:labour.gov.za` |
 | **Bargaining council extension** | `"[Council Name]" "extension to non-parties" "Government Gazette" site:gpwonline.co.za OR site:labour.gov.za` |
+| **MIBFA contribution rates & changes** | `"MIBFA" "contribution rate" "Circular" OR "Government Gazette" site:mibfa.co.za OR site:meibc.co.za` |
+| **Pension Funds Act s 13A / regulations** | `"Pension Funds Act" "Section 13A" "Government Gazette" OR "FSCA" site:fsca.co.za` |
 | **Codes of Good Practice** | `"Code of Good Practice" "[Subject]" "Government Gazette" site:labour.gov.za` |
 | **Court declarations of invalidity** | `"[Act Name]" "unconstitutional" OR "declaration of invalidity" "Constitutional Court" site:saflii.org` |
-
-Sector-specific patterns (MIBFA, Pension Funds Act s 13A) are in `references/meibc-mibfa.md`.
 
 **gov.za's Documents & Notices index** (https://www.gov.za/documents/notices) is searchable and sortable by title and date and lists the Gazette (G) and Notice number for each entry — use it to pin down or double-check a GN/GG citation rather than trusting a secondary source's transcription. Industry commentary (employer-association newsletters, law-firm blog posts, HR-service bulletins) is frequently imprecise about the exact notice number, or simply outdated by the time you read it. Where the index is inconclusive, prefer a source reproducing the operative notice's own text (for example a renewal notice reciting the instrument it renews) over one that merely asserts a number secondhand.
 
@@ -91,7 +83,7 @@ Record in the audit trail *how* each instrument was obtained, not merely that it
 ### D. Zero Tolerance for Unverified or Superseded Law
 
 * Never cite historical earnings thresholds, minimum wages, contribution rates or unproclaimed bills from memory.
-* Never cite a BCEA baseline where a collective agreement binding the employer sets a different standard (the MEIBC 40-hour week is the standing example — `references/meibc-mibfa.md`).
+* Never cite a BCEA baseline where a collective agreement binding the employer sets a different standard — never cite the 45-hour week for an employer bound by the MEIBC 40-hour standard (Section 2.E).
 * Never cite the superseded Schedule 8 of the LRA for dismissal procedure without the currently operative Code of Good Practice: Dismissal.
 * **Never cite a case you have not opened.** Confirm the neutral citation, court and holding on SAFLII before it goes into a document; a case quoted in commentary may have been overturned on appeal.
 * **Statutory time periods are as easy to misremember as section numbers, and are repeated confidently and wrongly across the internet.** Read the period off the Act, and check whether an amendment Act substituted the subsection you are quoting. The seven-day employer accident report under COIDA s 39(1) — routinely misquoted as thirty days — is the standing example.
@@ -103,7 +95,7 @@ Record in the audit trail *how* each instrument was obtained, not merely that it
 
 ### E. Volatile Figures — Never Carry a Number, Fetch It
 
-**This skill deliberately states no current monetary figure.** Thresholds, wage rates, ceilings, contribution percentages and interest rates all move on their own cycles; any number written into a skill is wrong by the time someone relies on it. Fetch every one of them, at the moment of use, from the source below — and cite the notice you actually fetched. Sector and payroll figures (MEIBC scales and levies, MIBFA rates, the UIF ceiling, tax tables) are listed in the reference files.
+**This skill deliberately states no current monetary figure.** Thresholds, wage rates, ceilings, contribution percentages and interest rates all move on their own cycles; any number written into a skill is wrong by the time someone relies on it. Fetch every one of them, at the moment of use, from the source below — and cite the notice you actually fetched.
 
 | Figure | Set by | Where to fetch it |
 | :--- | :--- | :--- |
@@ -112,6 +104,11 @@ Record in the audit trail *how* each instrument was obtained, not merely that it
 | **Prescribed rate of interest** | Determined by the Minister of Justice under the Prescribed Rate of Interest Act 55 of 1975, historically as repo rate plus a margin; gazetted, but notices are sometimes published late or not at all | gov.za notices index, search *"Prescribed rate of interest"*; where no current notice is found, cross-check the repo-rate-linked figure against at least two reputable practitioner trackers and say in the document that the rate is "as prescribed from time to time" |
 | **COIDA Schedule 4 maximum and minimum compensation amounts** | Ministerial notice amending Schedule 4 | gov.za notices index, search *"Compensation for Occupational Injuries and Diseases Act" "Schedule 4"*; the notice recites the amounts and its own effective date |
 | **COIDA assessment tariffs** | Compensation Fund / licensee notices | Compensation Fund and licensee (e.g. RMA) published tariff notices |
+| **UIF contribution ceiling** | Ministerial notice under the UIC Act | gov.za notices index, search *"Unemployment Insurance Contributions Act" "contribution"*; cross-check against the current SARS *Guide for Employers in respect of Unemployment Insurance Fund* |
+| **Tax tables and rebates** | Annual Budget / Rates and Monetary Amounts Act for the year | sars.gov.za tax rates pages for the year of assessment in issue |
+| **MIBFA contribution percentages** (employer and employee, by fund) | MEIBC benefit fund collective agreements, revised on a 1 July cycle | mibfa.co.za and the MEIBC circular for the period in issue; confirm against the governing Benefit Fund Collective Agreement as extended |
+| **MEIBC Rate A–H wage scales, shift and overtime schedules** | MEIBC Main Collective Agreement wage schedules and council circulars | meibc.co.za circulars, read with the gazetted extension notice for the period in issue |
+| **MEIBC administration and dispute resolution levies** | The Registration and Administration Expenses Collective Agreement and the Dispute Resolution Agreement, as renewed; rates published in council circulars | meibc.co.za circulars for the period in issue — **not** the renewal notice, which carries no rates |
 
 **Three traps when fetching:**
 
@@ -122,8 +119,6 @@ Record in the audit trail *how* each instrument was obtained, not merely that it
 **Tripwire:** whenever a fetched figure differs from a figure already stated in the user's own documents, correspondence or earlier drafts, stop and say so before going further. That mismatch is either an error to correct before service or a rate change to plead expressly — it is never something to paper over.
 
 ## 2. Core Legislative Frameworks
-
-Bargaining council, MEIBC and MIBFA rules live in `references/meibc-mibfa.md`; SARS, PAYE and UIF contribution rules in `references/sars-paye-uif.md`. Load them per Section 0.
 
 ### A. BCEA 75 of 1997 and NMWA 9 of 2018
 
@@ -149,7 +144,7 @@ Bargaining council, MEIBC and MIBFA rules live in `references/meibc-mibfa.md`; S
   * **(b)**, as substituted, provides that *"After the expiry of the said three months, compensation so paid by such employer shall be repaid to the employer by the Compensation Commissioner or licensee concerned, as the case may be."* This is a **reimbursement-to-employer** provision. It does **not** transfer the paying obligation. After the three months the employer's duty under (a) simply ends, and liability for compensation rests with the Commissioner or licensee under the Act generally — do not cite (b) for a liability shift.
   * **(c)**, as substituted by s 28 of Act 10 of 2022: an employer who fails to comply with paragraph (a) *"shall be liable to a penalty equal to double the full amount of three months compensation payable plus interest"* — an administrative penalty, no longer an offence.
 * **s 99, as substituted by s 61 of Act 10 of 2022** — *"Any person who does not comply with the provisions of sections 39, 40, 47, 64, 68, 81, 82 and 83 of this Act shall be liable to a penalty or penalties as specified in the said sections."* This is the general hook and it expressly lists ss 39 and 47, so "s 47(3)(c) read with s 99" and "s 39(6)/(8) read with s 99" are both correct.
-* **Rehabilitation and reintegration** — the Amendment Act imposes duties around clinical, vocational and work reintegration of injured employees; address these before any incapacity dismissal is contemplated, and before advising an injured employee to resign (`references/injured-worker-exit.md`, Part B). Domestic workers are covered, with retrospective effect.
+* **Rehabilitation and reintegration** — the Amendment Act imposes duties around clinical, vocational and work reintegration of injured employees; address these before any incapacity dismissal is contemplated, and before advising an injured employee to resign (Section 3.B). Domestic workers are covered, with retrospective effect.
 * **Enforcement** — a **s 93F** compliance order may be sought from a DEL Inspector for a COIDA contravention; **s 93G** allows it to be made an order of court on non-compliance; **ss 93A and 93D** carry the inspection and production powers. **s 58** governs advances on compensation — reach for it when hardship gridlocks a claim. **s 56** allows application for increased compensation on the grounds of employer negligence.
 * **Administrative channels** — RMA and other licensees for their sectors, otherwise Compensation Fund procedures.
 
@@ -158,7 +153,7 @@ Bargaining council, MEIBC and MIBFA rules live in `references/meibc-mibfa.md`; S
 * **Binding and enforcement architecture** — **s 31** (agreement binds the parties and their members); **s 32** (extension to non-parties by ministerial notice); **s 32A** (renewal of funding agreements for up to twelve months); **s 33A** (council enforcement: designated-agent compliance orders, arbitration, an arbitrator empowered to order payment and impose a fine, awards final, binding and enforceable). Identify which of these a given obligation rests on before pleading it.
 * **Code of Good Practice: Dismissal** — the current Code replaces Schedule 8; cite the operative Code and its effective date, and verify that date in the Gazette.
 * **ss 198A–198D (TES)** — a TES employee placed with a client and earning below the BCEA threshold who works beyond three months is deemed the client's employee (s 198A(3)(b)), with joint and several liability.
-* **Referral timelines (s 191)** — unfair and constructive dismissal, 30 days from dismissal (bargaining council or CCMA, Form LRA 7.11; full constructive dismissal procedure in `references/injured-worker-exit.md`, Part C); unfair labour practice under s 186(2), including unlawful deductions, 90 days; unfair discrimination under EEA s 10, 6 months. File condonation immediately where out of time, addressing degree of lateness, explanation, prospects of success and prejudice.
+* **Referral timelines (s 191)** — unfair and constructive dismissal, 30 days from dismissal (bargaining council or CCMA, Form LRA 7.11; full constructive dismissal procedure in Section 3.C); unfair labour practice under s 186(2), including unlawful deductions, 90 days; unfair discrimination under EEA s 10, 6 months. File condonation immediately where out of time, addressing degree of lateness, explanation, prospects of success and prejudice.
 * **CCMA rules and practice directives** — check the current rules on electronic service, digital filing and representation before assuming a service method is good.
 * **Drafting standard** — referrals, representations and closing statements must be exhaustive, factually dense, chronologically sound and anchored in documents: call recordings, emails, medical certificates, payslips, portal exports.
 
@@ -167,17 +162,152 @@ Bargaining council, MEIBC and MIBFA rules live in `references/meibc-mibfa.md`; S
 * **Amendment Act 4 of 2022** — designated employers defined by headcount (50 or more employees), the turnover threshold having been repealed; s 15A five-year ministerial sectoral targets; s 53 state-contract compliance certificates. Verify commencement and the current sectoral target notices.
 * **Harassment** — apply the Code of Good Practice on the Prevention and Elimination of Harassment in the Workplace.
 
-## 3. Earning, Leaving, Constructive Dismissal
+### E. MEIBC Main Collective Agreement (Metal & Engineering Industries)
 
-When an employee asks whether they may earn elsewhere while a COIDA claim is open, whether they can resign, or whether leaving is a constructive dismissal, load `references/injured-worker-exit.md` and answer the three questions as one plan — each move changes the others.
+Apply Sections 2.E and 2.F where the employer falls within the MEIBC's registered scope. Section 2.F's Pension Funds Act s 13A rules apply in any sector where retirement-fund contributions were deducted but not paid over.
 
-**Sequence rule (always applies):** no resignation goes out before (1) the constructive dismissal elements are documented, (2) the UIF consequence has been explained to the user, and (3) the compensation payer after termination has been asked in writing. No paid work starts during temporary total disablement before the treating doctor's written opinion and a written disclosure to the Commissioner or licensee.
+* **Three distinct binding routes — keep them apart.** Under **LRA s 31** a collective agreement concluded in a bargaining council binds the parties to it and their members: an employer belonging to an employers' organisation party to the council is bound directly, with no gazette required. Under **LRA s 32** an agreement binds **non-parties** only while a ministerial extension notice is in force. Under **LRA s 32A** the Minister may **renew a "funding agreement"** — a collective agreement financing the council's operations, dispute resolution, training or benefit schemes — for up to twelve months where non-renewal could undermine sectoral collective bargaining. Registration with a council is an administrative obligation; it makes an employer a *registered non-party*, **not** a party, and it does not by itself import the main agreement. If a user argues that compulsory registration carries the main agreement with it, the only route to that conclusion is the council's own constitution — a constitution question, not a gazette question. Put it to the council as a question rather than asserting it.
+* **Extension notices are volatile — verify current status, never assume a past citation still holds.** These instruments run on renewal cycles, commonly about 12 months; a notice states its own validity period, and once it lapses the agreement does not bind non-parties again until a fresh notice is gazetted. A lapse is routine and implies nothing improper.
+
+**Worked example — the MEIBC family, read from the gazettes themselves.** This is the pattern to expect from any bargaining council, and it demonstrates every trap in Section 1 at once.
+
+*Government Gazette No. 47254 of 7 October 2022* carried three adjacent notices:
+
+| Notice | Instrument |
+| :--- | :--- |
+| **GN R.2569** | Consolidated **Main** Collective Agreement — extension to non-parties, valid 1 July 2021 – **30 June 2024** |
+| **GN R.2570** | **Registration and Administration Expenses** Collective Agreement ("RAECA") |
+| **GN R.2571** | **Dispute Resolution** Collective Agreement |
+
+*Government Gazette No. 54698 of 18 May 2026* then carried four notices at pages 3–6, each made by the Minister **in terms of LRA s 32A(2)** and each effective from publication **for twelve months**:
+
+| Notice | Agreement renewed | Renewing |
+| :--- | :--- | :--- |
+| **3941 of 2026** | Registration and Administration Expenses | GN R.2570 of 7 Oct 2022 (GG 47254) |
+| **3942 of 2026** | Dispute Resolution | GN R.2571 of 7 Oct 2022 (GG 47254) |
+| **3943 of 2026** | **Pension** Fund | GN R.2214 of 1 July 2022 (GG 46648) |
+| **3944 of 2026** | **Provident** Fund | GN R.2212 of 1 July 2022 (GG 46648) |
+
+Four lessons, each of which cost something to learn:
+
+1. **The Main Agreement was not renewed.** R.2569 sat immediately beside R.2570 and R.2571 in the 2022 gazette; in 2026 the Minister renewed the latter two and left R.2569 alone. Its non-party extension status must therefore be checked on its own and never inferred from the levy or fund agreements.
+2. **One notice, one agreement.** Commentary reporting that "four MEIBC agreements were re-extended" describes four separate notices. Notice 3941 renews RAECA and nothing else.
+3. **Enumerate the neighbours.** Having 3941 alone leaves the family ambiguous; retrieving 3942–3944 settles in minutes what secondary summaries leave unclear — including which of Pension and Provident is which.
+4. **None of these notices contains a rate.** Each is a single operative sentence. Levy and contribution figures live in the agreements and the council's circulars.
+
+* **Working hours (Part I, s 4)** — 40 ordinary hours per week is the enforceable industry standard where the agreement binds, superseding the BCEA s 9 baseline; hours beyond 40 are overtime.
+* **Overtime and premium pay (Part I, s 5)** — first 10 overtime hours in a week at 1.5×; beyond 10 hours at 2.0×; Sunday work at double time subject to a minimum of one ordinary shift's pay; public holidays at an ordinary day's wage plus 1.5× for hours actually worked; second and third shift allowances per the Part I schedules. Confirm the multipliers against the current agreement text — they are collective-agreement terms, not statute.
+* **Wage structure (Rates A–H)** — scheduled grading from Rate A (skilled artisans, toolmakers) to Rate H (general labourers). Paying below the minimum for a scheduled grade is a continuing breach enforceable under LRA s 33A through MEIBC Compliance & Enforcement. Fetch the scale per Section 1.E.
+* **Leave Enhancement Pay (Part I, ss 12 and 14)** — compulsory annual leave bonus payable at the annual shutdown or on taking annual leave, calculated by reference to service credit weeks. Withholding LEP for financial strain is unlawful.
+* **Short time and lay-off (Part I, s 7)** — unilateral declaration is unlawful; requires clear written notice to employees and shop stewards (NUMSA, Solidarity, MEWUSA, SAEWA, UASA) or an agreed consultation procedure. Confirm the notice period in the current agreement.
+* **Retrenchment and severance (Annexure A)** — consultation timetable with shop stewards before notices; severance must meet the council standard, which commonly exceeds the BCEA one-week minimum.
+* **Council levies — who is actually owed.** The administration and dispute resolution levies are split between an employer contribution and an employee contribution, the employee share being deducted from wages (lawful under BCEA s 34(1)(b), being required by a collective agreement). Where an employer never deducted the employee share, **the employee is not out of pocket and has no claim to it** — the council is the party owed, and LRA s 33A is its route. Say so expressly in any complaint: a complainant who disclaims money he is not owed is read very differently from one who claims everything. Two riders: the employer may seek to recover arrear employee levies by deduction going forward, so warn the user and quantify it (it is usually trivial); and where the months in question were paid as COIDA compensation, **COIDA s 32(1)(d) bars any such set-off**, so arrear levies cannot lawfully be taken out of compensation months.
+* **Never merge the levy and fund regimes.** Levies arise under the Registration and Administration Expenses and Dispute Resolution Agreements and are enforced by the council under **LRA s 33A**. Fund contributions arise under the Pension and Provident Fund Agreements read with the **Pension Funds Act**, and carry the s 13A timing rule, the s 37(1) offence and the s 13A(8) personal liability. That MIBFA collects both on one monthly return is administrative convenience, not legal identity. Pleading levies "under s 13A" invites the answer that the complainant has misread the instrument — and that answer contaminates the fund claim, which is the one that reaches the directors personally.
+* **Jurisdiction (MEIBC Centre for Dispute Resolution)** — the CDR has primary jurisdiction over unfair dismissals (including constructive dismissals — Section 3.C), unfair labour practices and agreement-enforcement disputes in the industry; matters misfiled at the CCMA are dismissed for want of jurisdiction. Jurisdiction is primary, not literally exclusive — the LRA allocates certain disputes to the Labour Court.
+
+### F. MIBFA Compliance
+
+MIBFA administers retirement, disability and welfare schemes governed by MEIBC collective agreements read with the Pension Funds Act 24 of 1956. Because those fund agreements finance benefit schemes, they are **funding agreements renewable under LRA s 32A** — which is why they move on the same renewal cycle as the levy agreements and independently of the main agreement.
+
+* **Funds** — Metal Industries Provident Fund (MIPF); Engineering Industries Pension Fund (EIPF); Metal and Engineering Industries Permanent Disability Scheme; Metal Industries Sick Pay Fund.
+* **Contributions** — calculated on pensionable remuneration (basic scheduled wages plus shift allowances and wage adjustments). Fetch the employer and employee percentages for the period in issue per Section 1.E; an employer that has not adjusted payroll to the active rate is in breach.
+* **Pension Funds Act s 13A**
+  * **7-day rule (s 13A(1))** — amounts deducted must be paid over no later than the 7th day of the month following the month of deduction.
+  * **Offence (s 37(1))** — failure to pay over deducted contributions is a criminal offence.
+  * **Personal liability (s 13A(8))** — directors, close corporation members and persons managing the employer's financial affairs are personally, jointly and severally liable for unpaid contributions, late-payment interest and penalties. This is often the only route in a payroll dispute that reaches the individuals behind the company; name them.
+* **Enforcement** — (1) LRA s 33A referral to the MEIBC CDR: a collective agreement may authorise a designated agent to issue a compliance order, unresolved compliance disputes go to arbitration, and the arbitrator may order payment, impose a fine within ministerial limits and determine interpretation disputes, the award being final, binding and enforceable through the Labour Court and Sheriff; (2) complaint to the Office of the Pension Funds Adjudicator under PFA s 30A against the employer and the individual directors, an Adjudicator determination being deemed a civil judgment of the High Court.
+* **Sick Pay Fund and COIDA interplay** — the Sick Pay Fund provides safety-net income during extended incapacity, so an employer cannot force an employee onto unpaid leave while a COIDA temporary total disablement claim is processed.
+* **On termination** — where an employee resigns or is dismissed (Section 3.B), establish the fund withdrawal position and check that every deducted contribution was actually remitted before the member's benefit statement is relied on.
+* **The self-proving audit** — a payslip that shows PAYE, UIF and loan deductions but no fund contribution, and company contributions of the Skills Development Levy and employer UIF only, proves the omission on the employer's own document. Build the complaint on that rather than on the user's account of it.
+
+### G. SARS, PAYE and UIF
+
+#### Tax treatment of compensation
+
+* **Income Tax Act s 10(1)(gB)(i)** — statutory IOD compensation is exempt from normal tax and belongs under SARS Source Code 3602/3696, not 3601. Withholding PAYE against exempt compensation is both a tax mis-declaration and, because the money came out of ring-fenced compensation, a COIDA s 32(1) breach. Audit any payroll manipulation where employers fail to register employees, deduct incorrect PAYE/UIF, or declare exempt compensation as taxable income.
+* **New earnings while a claim is open** — compensation stays exempt; earnings from other work do not. Self-employed or freelance income is taxable in the claimant's hands and may require provisional-tax registration. Check SARS's current rules for the year before advising, and keep the disclosure to the Commissioner or licensee (Section 3.A) consistent with what is declared to SARS.
+
+#### Reconstructing a PAYE over-deduction
+
+PAYE is an annual tax collected cumulatively, so removing exempt income from later months re-prices the whole year to date and turns earlier correct withholdings into over-payments. Reverse-engineer the employer's own cumulative annualisation formula and test it against months before the misclassification arose: if it reproduces the employer's actual withholding **to the cent**, the corrected months are very hard to oppose. Fetch the tax tables and rebates for the year in issue rather than recalling them. Expect the reader to ask why the claim exceeds the PAYE visible on the affected payslips — answer it inside the document, by showing that the difference is the refund the employer's own payroll would have generated automatically had the coding been right.
+
+#### UIF
+
+* **Contributions** — contributions are levied on remuneration; COIDA compensation is not remuneration for services rendered. Audit non-registration, over-deduction and unremitted contributions against the current ceiling, fetched per Section 1.E.
+* **Benefits after termination** — unemployment benefit entitlement turns on the reason for unemployment (Unemployment Insurance Act 63 of 2001, s 16(1)(a)). See Section 3.B before any resignation goes out.
+
+#### Choosing the right SARS channel — they are not interchangeable
+
+SARS's **Complaints** function (the Complaints Management Office, via eFiling) is confined to grievances about *SARS's own* process or service, and refers assessment and decision disputes to objection and dispute resolution; it is **not** a channel for reporting an employer. Reporting a third party's non-compliance goes through SARS's **report suspected non-compliance / suspicious activity** channel (external guide GEN-GEN-10-G01), which feeds Audit & Compliance. Set expectations honestly: such a report can trigger an audit of the employer but pays the employee nothing — recovery runs through the employer correcting its payroll and resubmitting the EMP501/IRP5, or through the employee's own assessment. Escalate tax-treatment disputes formally under the Tax Administration Act 28 of 2011 rather than through internal employer negotiation where the employer is acting in bad faith.
+
+## 3. The Injured Worker's Next Three Questions — Earning, Leaving, Constructive Dismissal
+
+These arrive together once a claim stalls and money runs out. Answer them as one plan: taking on paid work affects the compensation claim and the dismissal case; resigning affects UIF, the reintegration duties and the onus of proof. Quote the provisions below from the in-force text (Section 1) — the anchors given here are from the principal Act and must be checked against Act 10 of 2022 before they go into a document.
+
+### A. Earning income while receiving temporary total disablement compensation
+
+**Anchors (COIDA):** s 47(1)(a) — temporary total disablement (TTD) compensation is calculated per Schedule 4, Item 1. **s 47(2)** — *"Compensation for temporary partial disablement shall consist of such portion of the amount calculated in terms of subsection (1) as the commissioner may consider equitable."* **s 47(5)(a)** — periodical payments continue *"for so long as the temporary total disablement continues"*, capped at 12 months unless extended under s 47(5)(b). **s 47(6)** — TTD continuing beyond 24 months may be treated as permanent disablement.
+
+1. **TTD rests on medical certification that the employee cannot work.** Paid work taken on while certified totally disabled contradicts the certificate the payments stand on. Before any paid work starts, get the treating doctor's written opinion on whether the proposed work is medically compatible with the injury. Desk work that does not load the injured part may be compatible where the employee's own trade is not — that is what temporary partial disablement exists for. The doctor decides it, not the claimant.
+2. **Expect reclassification, and price it.** Where work is compatible, expect the claim to move from TTD to temporary partial disablement under s 47(2), paid at a portion the Commissioner considers equitable. Quantify the likely reduction against the expected earnings before advising the user to proceed. The rational answer is sometimes to wait.
+3. **Disclose in writing, first.** Notify the Commissioner or licensee in writing before or when earning starts: the nature of the work, hours and expected earnings, with the doctor's opinion attached. Concealed earnings invite recovery of compensation paid, fraud allegations, and a credibility attack on the whole claim. Read the Act's own false-statement, offence and recovery provisions before advising — never cite a section number for them from memory.
+4. **Tax** — compensation stays exempt; the new earnings do not. See Section 2.G.
+5. **Mind the dismissal case.** A new income stream set up before resignation can be used to argue the employee was leaving anyway (Section 3.C, element 1). Sequence the two decisions deliberately, and document the reason for each.
+
+### B. Leaving employment while an IOD claim is open
+
+**What survives — anchors:**
+
+* **s 22(1)** — the entitlement arises when an employee *"meets with an accident resulting in his disablement or death"*. It attaches to the accident, not to continuing employment.
+* **s 47(3)(a)** — the first three months' liability rests on *"the employer in whose service an employee is at the time of the accident"*: the employer at the date of the accident. Resignation does not extinguish it.
+* **After three months**, liability rests with the Commissioner or licensee (Section 2.B on s 47(3)(b)), and periodical payments run while the disablement continues (s 47(5)).
+
+Before telling a user that resignation is "safe" for compensation, confirm no amending provision ties any benefit to continuing employment, and establish in writing how the Commissioner or licensee will pay a former employee — the payroll channel the employer used is gone.
+
+**What may be lost:**
+
+* **UIF unemployment benefits.** Unemployment Insurance Act 63 of 2001, **s 16(1)(a)** pays where unemployment results from (i) termination by the employer or the end of a fixed-term contract, (ii) *"the dismissal of the contributor, as defined by section 186 of the Labour Relations Act, 1995"*, (iii) insolvency, or (iv) for a domestic worker, the employer's death. A plain resignation fits none of them. A constructive dismissal is a dismissal under LRA s 186(1)(e), so it fits (ii) in principle — but the employer's termination paperwork will record "resignation", so expect UIF to require the dismissal to be established (by settlement or award) first. Fetch the current text of s 16 and UIF's current practice before advising.
+* **Reintegration duties.** The rehabilitation and return-to-work duties inserted by Act 10 of 2022 are framed around the employment relationship. Check the inserted provisions and their commencement; a resignation may end the employer's duty to reintegrate.
+* **The onus.** An employee who is dismissed for incapacity leaves the employer to prove fairness. One who resigns must first prove there was a dismissal at all (LRA s 192(1)). Staying employed while the employer's incapacity process runs is sometimes the stronger position — say so when it is.
+* **Termination money.** Claim accrued leave pay and a certificate of service under the BCEA termination provisions (Section 2.A). Where the employee is a fund member, see Section 2.F for the fund position on termination.
+
+**Sequence rule:** no resignation goes out before (1) the constructive dismissal elements are documented (Section 3.C), (2) the UIF consequence has been explained to the user, and (3) the compensation payer after termination has been asked in writing.
+
+### C. Constructive dismissal — the full procedure
+
+**Definition:** LRA **s 186(1)(e)** — the employee terminated employment, with or without notice, because the employer made continued employment intolerable for the employee.
+
+**Elements the employee must prove** (CCMA Constructive Dismissal Info Sheet, CCMA-I819-2018-01, read with the operative Code of Good Practice: Dismissal):
+
+1. The employee terminated the contract **because of the employer's conduct** — not because the employee was planning to resign anyway.
+2. Continued employment had become **intolerable**.
+3. It was **the employer** who made it intolerable.
+
+**Onus:** the employee must establish the dismissal (**s 192(1)**); only then must the employer prove it was fair (**s 192(2)**).
+
+**Before resigning:**
+
+1. **Exhaust or excuse internal remedies.** The CCMA expects employees to *"utilise grievance procedures or complain to higher levels of management, provided that that is a reasonable option in the circumstances"*. Where it is not — for example, where HR and payroll are held by the owners whose conduct is complained of — record in writing why internal escalation is futile. The tribunal asks whether the employee had a reasonable alternative to resigning.
+2. **Build the intolerability record from documents**: dated incidents, the employer's own correspondence, recordings (lawful single-party recording under RICA s 4), payslips, medical evidence of effect. Prefer the employer's own documents over the employee's account.
+3. **Guard element 1.** Evidence of a planned exit — a new job, a business being set up, income already earned elsewhere — lets the employer argue the employee was leaving anyway. Deal with it in the resignation letter and the statement of case before the employer raises it.
+
+**The resignation letter** — in writing; states that the employee resigns because the employer has made continued employment intolerable; lists the conduct with dates and document references; records any grievance lodged and its fate, or why none was lodged; states the last day of service; gives no other reason for leaving.
+
+**Date of dismissal and the 30-day clock** — read **s 190** on the date of dismissal. Where the employee resigns with notice and works it, Labour Court authority treats the date of dismissal as the day the employee actually leaves service, not the day notice is given; confirm the current position on SAFLII before relying on it. If the employer waives the notice period, the date moves — recompute.
+
+**Referral** — Form **LRA 7.11** to the bargaining council whose registered scope covers the parties, otherwise the CCMA (**s 191(1)(a)**), within **30 days** of the date of dismissal (**s 191(1)(b)(i)**). Send a copy to the employer and keep proof of service. Late referral needs condonation on good cause (**s 191(2)**): address degree of lateness, explanation, prospects of success and prejudice. In the metal and engineering sector the forum is the MEIBC CDR (Section 2.E).
+
+**Conciliation, then arbitration or court** — if conciliation fails, a constructive dismissal goes to **arbitration** at the employee's request (**s 191(5)(a)**); the CCMA's request form is **LRA 7.13**, lodged within **90 days** of the certificate of outcome. Where the reason for dismissal is alleged to be automatically unfair (**s 187**), the **Labour Court** route under **s 191(5)(b)** applies instead — test the facts against s 187's listed grounds before choosing, because the forum, the costs risk and the compensation cap all change (Section 6).
+
+**Remedy** — compensation up to **12 months' remuneration** for an unfair dismissal (**s 194(1)**), with a higher cap for automatically unfair dismissals (**s 194(3)** — read it). Reinstatement sits awkwardly with the employee's own case that the workplace is intolerable; plan on compensation.
+
+**Parallel claims** — a constructive dismissal referral runs alongside, not instead of, the COIDA claim, BCEA s 34 deduction claims and s 186(2) unfair labour practice referrals already in motion. Keep each forum's relief separate and check for double recovery (Section 5).
 
 ## 4. Behavioural Protocols & Strategic Stance
 
-* **Industry-aware auditing** — establish first whether a bargaining council agreement binds the employer. In the metal and engineering sector, load `references/meibc-mibfa.md` rather than defaulting to generic BCEA baselines.
+* **Industry-aware auditing** — establish first whether a bargaining council agreement binds the employer. In the metal and engineering sector, apply Sections 2.E and 2.F rather than defaulting to generic BCEA baselines.
 * **Objective and analytical** — strategic, non-sugarcoated, meticulous. Speak to the user as a sharp, protective advisor.
-* **Pierce to the individuals** — when auditing unpaid pension or provident contributions, name the directors, members and financial officers personally under PFA s 13A(8) (`references/meibc-mibfa.md`).
+* **Pierce to the individuals** — when auditing unpaid pension or provident contributions, name the directors, members and financial officers personally under PFA s 13A(8) (Section 2.F).
 * **Evidence-centric** — build on documents the other side produced: payslips, system annotations, portal exports, audit trails, its own correspondence. Self-proving evidence is far harder to oppose than the user's characterisation of events. Preserve emails, letters of demand, affidavits, transcripts and recordings (single-party recording is lawful under s 4 of RICA).
 * **Anti-victimisation** — flag retaliation, bullying or constructive-dismissal manoeuvres following an assertion of statutory or collective-agreement rights, and pair an internal grievance with a concurrent s 186(2) unfair labour practice referral. Where the user is considering leaving, run Section 3 before anything is sent.
 * **Cost is a live constraint** — people bringing IOD and unlawful-deduction complaints are frequently unpaid and out of money; that is often why the matter is urgent. Default to the cheapest route that works: commissioning of oaths is free at SAPS stations, statutory bodies accept electronic service, statute and gazette annexures need not be printed for a regulator that already has them, and a short schedule a decision-maker will read beats a heavy bundle that gets shelved. Say what a step will cost before recommending it.
@@ -199,7 +329,7 @@ When the user is preparing something that will actually be sworn, filed or serve
 * **A figure that does not reconcile against something already served.** Where a later quantum exceeds an earlier letter of demand, put the derivation in the document, itemised, so the increase cannot be read as inflation — and say plainly if the earlier figure was computed on a different basis.
 * **Double recovery between alternative heads.** Where one head would restore a month's pay, check whether other heads assumed that month was underpaid, and concede the adjustment expressly. The same check applies across forums once a constructive dismissal claim runs beside a COIDA claim.
 * **Money claimed that is not the claimant's.** Where a contravention is owed to a third party — a council levy, a fund contribution never deducted — say so and disclaim it. It costs nothing and it makes the rest of the claim read as measured.
-* **Two regimes pleaded as one.** Keep separate instruments and their enforcement routes expressly apart — the levy/fund split in `references/meibc-mibfa.md` is the standing example.
+* **Two regimes pleaded as one.** Keep separate instruments and their enforcement routes expressly apart — levies and fund contributions above all (Section 2.E) — and say in the document that you do.
 * **Earnings or plans the other side can surface.** In a constructive dismissal or compensation matter, any income earned or exit planned before resignation belongs in the user's own document first (Section 3).
 * **Summary drift.** Cover sheets, matrices, executive summaries and annexure registers are written early and corrected late. After any correction to the body, re-read the front matter and the register: a document that contradicts itself on page 1 loses the reader before the argument starts.
 * **Empty or missing annexures.** If an annexure is reserved or a number is skipped, say so on the register, so the reader does not assume the bundle is incomplete.
@@ -231,7 +361,7 @@ When a trigger fires, still produce the preparatory work — chronology, documen
    | :--- | :--- | :--- | :--- | :--- |
 2. **Escalation notice** — where a Section 6 trigger fires, one line at the top naming the trigger, the forum, the deadline and where to get representation.
 3. **Jurisdictional & industry classification** — bargaining council versus CCMA versus DEL Inspectorate versus Commissioner/licensee versus Labour Court, stated and reasoned.
-4. **Statutory & collective compliance audit** — breaches grouped by instrument (collective agreement and funds; BCEA / COIDA / LRA / UIA / SARS), each citation verified against primary text, each supported by the other side's own document where possible.
+4. **Statutory & collective compliance audit** — breaches grouped by instrument (MEIBC Main Agreement; MIBFA / Pension Funds Act; BCEA / COIDA / LRA / UIA / SARS), each citation verified against primary text, each supported by the other side's own document where possible.
 5. **Exit and income plan** — where Section 3 is engaged: the sequence of disclosure, resignation and referral, with each consequence (compensation, UIF, onus, deadlines) stated.
-6. **Actionable roadmap** — chronological steps with form numbers, target offices (including specific regional council, CCMA, OPFA and DEL offices) and prescription windows.
+6. **Actionable roadmap** — chronological steps with form numbers, target offices (including specific regional MEIBC CDR, CCMA, OPFA and DEL offices) and prescription windows.
 7. **Draft legal blueprints** — complete, ready-to-issue correspondence: s 13A letter of demand to employer and directors with the personal-liability warning; CCMA / council Form LRA 7.11 statement of case; resignation letter for a constructive dismissal; written disclosure of earnings to the Commissioner or licensee; PFA s 30A complaint; COIDA s 32 anti-clawback demand; affidavit and formal complaint to the DEL Inspectorate.

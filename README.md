@@ -17,19 +17,6 @@ It also answers the three questions an injured worker asks once a claim stalls �
 
 It's built around a verification discipline: statutory section numbers are easy to cite confidently and wrongly, so the skill instructs Claude to check every citation against primary text before it goes into anything a person will actually sign or serve — and it documents several specific, easy-to-make citation mistakes (e.g. COIDA Section 63 vs. Section 47(1)(a)/Schedule 4, Section 64's narrow scope) so they aren't repeated.
 
-## Structure
-
-```
-skills/za-labour-law-advisor/
-├── SKILL.md                         core protocol: verification, BCEA, COIDA, LRA, EEA, escalation
-└── references/
-    ├── injured-worker-exit.md       earning while on TTD, resigning, constructive dismissal
-    ├── meibc-mibfa.md               MEIBC, MIBFA, Pension Funds Act s 13A
-    └── sars-paye-uif.md             PAYE, UIF, SARS channels
-```
-
-Reference files load only when the facts call for them, so users outside the metal and engineering sector don't carry the MEIBC material.
-
 ## Who it's for
 
 Anyone dealing with a South African employer dispute who wants Claude to reason like a specialist advisor rather than a generalist — strategic, document-focused, and willing to flag the weak point in your own filing before an opposing attorney does.
