@@ -71,6 +71,16 @@ Run these patterns against Government Printing Works, the official departmental 
 
 Record in the audit trail *how* each instrument was obtained, not merely that it was.
 
+#### When primary sources cannot be reached at all
+
+Some environments block the gazette and legal hosts outright — a proxy or egress policy refuses the connection, or the fetch tool reports the domain blocked — while web search still returns commentary. That is not a search failure, and the ladder above does not cure it:
+
+1. **Say so at the top of the output, naming each blocked host.** The user can often allow the hosts, or fetch the notice themselves.
+2. **Search snippets and commentary are leads, not sources.** Use them to identify which notice and gazette number to ask for — never as the source of a figure, a commencement date or a holding.
+3. **Where secondary sources disagree with each other, use neither.** Two commentators quoting different figures for the same determination mean at least one transcription is wrong, or a correction notice exists. Record both and resolve them against the notice itself.
+4. **Mark every unfetched instrument UNVERIFIED in the audit trail** (Section 7): "How obtained" reads *not fetched — [host] blocked*, and "In-Force Status" reads *UNVERIFIED*. Analysis may proceed on that basis, labelled as such.
+5. **Nothing goes to signature or service on an UNVERIFIED citation or figure.** A draft may be prepared, marked not for service until each UNVERIFIED row is cleared from primary text — by an unblocked fetch, by the administering body, or by the user supplying the gazette (rungs 3 and 4 above still work).
+
 ### C. Full Citation Format
 
 1. **Bargaining council agreements** — council, full agreement title, gazetted extension notice, section (e.g. *MEIBC Main Collective Agreement, extended to non-parties by GN …, Part I s 4 (Hours of Work)*).
@@ -326,12 +336,15 @@ When the user is preparing something that will actually be sworn, filed or serve
 * **Relief outside the forum's power** — a COIDA compliance order compels an employer to comply with COIDA; it does not assess tax or order a refund from the National Revenue Fund. Where the money was taken *out of* ring-fenced compensation, frame the relief as an order that the employer pay compensation it has not paid, the employer's own EMP501/IRP5 correction being its own remedy — and plead the narrower alternative expressly.
 * **A statement of past fact that has since become untrue.** Sworn documents are drafted over weeks; a payment, tender or reply arriving mid-draft falsifies an earlier paragraph. Re-read every "as at the date of signature" and "no payment has been made" sentence against the latest facts before swearing, and date such statements to the event rather than to signature.
 * **A statement of service that has not happened.** Never describe a document as "submitted to" or "served upon" a party it was not sent to, and keep the Proof of Service page consistent with what was actually served and on whom.
+* **A chronology that cannot be true.** Put every document's own dates side by side — drafted, prepared, generated, exported, downloaded, signed, sworn, served — and check each against every date the bundle asserts for it. An annexure described as served on one date cannot have been prepared on a later one, and a letter cannot rely on a document that came to hand after it was sent. Where a later version replaced an earlier one (a re-typed transcript, a re-downloaded payslip), say so expressly and date both, rather than leaving the reader to find two dates for one exhibit.
+* **The user's own work labelled as official.** Never describe the user's own analysis, worksheet, screenshot, portal print-out or summary as "official", "certified" or "statutory", or as an audit by a body that did not produce it. "Certified" means certified by a commissioner of oaths or by the issuing body, and nothing else. Describe each exhibit by who made it and how — "my analysis of SARS External Guide …", "a print-out I made from the uFiling portal on [date] at [time]". An inspector who finds one exhibit overstated discounts the rest.
+* **Conduct that contradicts the user's own explanation.** Where the document relies on a limitation — medical incapacity, inability to travel, lack of funds, lack of knowledge — check every other act the bundle describes, down to how it will be served, for conduct inconsistent with it. A worker who declines a meeting on medical grounds and then delivers the bundle in person has handed the employer its first question. Either explain the difference in the document or change the conduct (serve electronically).
 * **A figure that does not reconcile against something already served.** Where a later quantum exceeds an earlier letter of demand, put the derivation in the document, itemised, so the increase cannot be read as inflation — and say plainly if the earlier figure was computed on a different basis.
 * **Double recovery between alternative heads.** Where one head would restore a month's pay, check whether other heads assumed that month was underpaid, and concede the adjustment expressly. The same check applies across forums once a constructive dismissal claim runs beside a COIDA claim.
 * **Money claimed that is not the claimant's.** Where a contravention is owed to a third party — a council levy, a fund contribution never deducted — say so and disclaim it. It costs nothing and it makes the rest of the claim read as measured.
 * **Two regimes pleaded as one.** Keep separate instruments and their enforcement routes expressly apart — levies and fund contributions above all (Section 2.E) — and say in the document that you do.
 * **Earnings or plans the other side can surface.** In a constructive dismissal or compensation matter, any income earned or exit planned before resignation belongs in the user's own document first (Section 3).
-* **Summary drift.** Cover sheets, matrices, executive summaries and annexure registers are written early and corrected late. After any correction to the body, re-read the front matter and the register: a document that contradicts itself on page 1 loses the reader before the argument starts.
+* **Summary drift.** Cover sheets, matrices, executive summaries and annexure registers are written early and corrected late. After any correction to the body, re-read the front matter, the prayers and the register, and check that nothing the body expressly disclaims ("I make no contention that …") is asserted anywhere else: a document that contradicts itself on page 1 loses the reader before the argument starts.
 * **Empty or missing annexures.** If an annexure is reserved or a number is skipped, say so on the register, so the reader does not assume the bundle is incomplete.
 
 ## 6. When a Matter Outgrows This Skill
@@ -356,7 +369,7 @@ When a trigger fires, still produce the preparatory work — chronology, documen
 
 ## 7. Output Formats & Artifacts
 
-1. **Gazette Verification & Statutory Audit Trail** — a table at the outset, one row per instrument actually fetched, recording how it was obtained:
+1. **Gazette Verification & Statutory Audit Trail** — a table at the outset, one row per instrument relied on, recording how it was obtained; an instrument that could not be fetched keeps its row, marked UNVERIFIED (Section 1.B):
    | Act / Collective Instrument | Triggered Sections | Gazette / Notice / Proclamation Checked | How obtained | In-Force Status & Effective Date |
    | :--- | :--- | :--- | :--- | :--- |
 2. **Escalation notice** — where a Section 6 trigger fires, one line at the top naming the trigger, the forum, the deadline and where to get representation.
