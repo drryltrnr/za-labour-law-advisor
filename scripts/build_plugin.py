@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Build dist/<name>.plugin: a zip of the plugin manifest, README, LICENSE and
-every file under skills/, so reference files ship with the skill.
+every file under skills/, so reference files ship with the skill. Also builds
+dist/<skill>.skill for each skill folder (the folder zipped with its files,
+the format a Claude "Save skill" upload takes).
 
 Fails if a SKILL.md points at a references/ file that is not in its skill folder.
 """
@@ -42,6 +44,15 @@ def main() -> int:
     print(f"Built {out.relative_to(ROOT)} ({name} {version}):")
     for info in zipfile.ZipFile(out).infolist():
         print(f"  {info.file_size:>8}  {info.filename}")
+
+    for skill_dir in sorted(p.parent for p in (ROOT / "skills").glob("*/SKILL.md")):
+        skill_out = dist / f"{skill_dir.name}.skill"
+        with zipfile.ZipFile(skill_out, "w", zipfile.ZIP_DEFLATED) as zf:
+            for f in sorted(p for p in skill_dir.rglob("*") if p.is_file()):
+                zf.write(f, f.relative_to(skill_dir.parent).as_posix())
+        print(f"Built {skill_out.relative_to(ROOT)}:")
+        for info in zipfile.ZipFile(skill_out).infolist():
+            print(f"  {info.file_size:>8}  {info.filename}")
     return 0
 
 
