@@ -1,18 +1,23 @@
 {
   "name": "za-labour-law-advisor",
-  "version": "0.2.1",
-  "description": "Strategic analysis, legal text auditing and document drafting for South African statutory labour frameworks (BCEA, LRA, COIDA, EEA, UIA, CCMA and bargaining council rules, SARS PAYE/UIF), the MEIBC Main Collective Agreement and MIBFA benefit funds.",
+  "version": "0.3.0",
+  "description": "Worker-side strategic analysis, legal text auditing and document drafting for any South African employment dispute under the BCEA, NMWA, LRA, EEA, COIDA, UIA/UIC Act, Prescription Act and SARS rules, CCMA and bargaining council practice, with sector modules for the MEIBC Main Collective Agreement and MIBFA benefit funds.",
   "license": "MIT",
   "keywords": [
     "south-africa",
     "labour-law",
-    "coida",
     "bcea",
+    "lra",
     "ccma",
-    "workplace-injury",
+    "unfair-dismissal",
+    "retrenchment",
+    "unfair-labour-practice",
+    "employment-equity",
+    "minimum-wage",
+    "coida",
+    "uif",
     "payroll-compliance",
     "constructive-dismissal",
-    "uif",
     "meibc"
   ]
 }
