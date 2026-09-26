@@ -1,14 +1,16 @@
 name: Release
 
-# Publishes a GitHub release for a v* tag, with the plugin and skill packages
-# built by scripts/build_plugin.py. Release notes come from the tag message.
+# Publishes a GitHub release with the plugin and skill packages built by
+# scripts/build_plugin.py. Runs on a pushed v* tag, or manually: a manual run
+# creates the tag at the commit it runs on if the tag does not exist yet.
+# Notes come from release-notes/<tag>.md if present, else the tag message.
 on:
   push:
     tags: ['v*']
   workflow_dispatch:
     inputs:
       tag:
-        description: Existing tag to (re)publish, e.g. v0.3.0
+        description: Tag to publish, e.g. v0.3.0 (created at this commit if missing)
         required: true
 
 permissions:
@@ -21,8 +23,6 @@ jobs:
       TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: refs/tags/${{ env.TAG }}
 
       - name: Check the manifest version matches the tag
         run: |
@@ -32,13 +32,26 @@ jobs:
             exit 1
           fi
 
+      - name: Check an existing tag points at this commit
+        run: |
+          if git fetch --force origin "refs/tags/$TAG:refs/tags/$TAG" 2>/dev/null; then
+            tagged="$(git rev-parse "refs/tags/$TAG^{commit}")"
+            if [ "$tagged" != "$GITHUB_SHA" ]; then
+              echo "::error::tag $TAG points at $tagged, not $GITHUB_SHA; run the workflow on the tag"
+              exit 1
+            fi
+          fi
+
       - name: Build the plugin and skill packages
         run: python3 scripts/build_plugin.py
 
-      - name: Release notes from the tag message
+      - name: Release notes
         run: |
-          git fetch --force origin "refs/tags/$TAG:refs/tags/$TAG"
-          git for-each-ref "refs/tags/$TAG" --format='%(contents)' > notes.md
+          if [ -f "release-notes/$TAG.md" ]; then
+            cp "release-notes/$TAG.md" notes.md
+          elif git rev-parse -q --verify "refs/tags/$TAG" >/dev/null; then
+            git for-each-ref "refs/tags/$TAG" --format='%(contents)' > notes.md
+          fi
           [ -s notes.md ] || echo "Release $TAG" > notes.md
           cat notes.md
 
@@ -46,9 +59,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          assets="dist/za-labour-law-advisor.plugin dist/za-labour-law-advisor.skill"
+          assets=(dist/za-labour-law-advisor.plugin dist/za-labour-law-advisor.skill)
           if gh release view "$TAG" >/dev/null 2>&1; then
-            gh release upload "$TAG" $assets --clobber
+            gh release upload "$TAG" "${assets[@]}" --clobber
           else
-            gh release create "$TAG" $assets --verify-tag --title "$TAG" --notes-file notes.md
+            gh release create "$TAG" "${assets[@]}" --target "$GITHUB_SHA" --title "$TAG" --notes-file notes.md
           fi

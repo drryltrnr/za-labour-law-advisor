@@ -31,7 +31,7 @@ Download `za-labour-law-advisor.plugin` from the [latest release](https://github
 
 To build the packages yourself, run `python3 scripts/build_plugin.py`. It writes `dist/za-labour-law-advisor.plugin` (manifest, README, LICENSE and every file under `skills/`) and `dist/za-labour-law-advisor.skill` (the skill folder alone — `SKILL.md` plus `references/` — for a Claude **Save skill** upload), and refuses to build if `SKILL.md` points to a reference file that is missing.
 
-Releases are published by `.github/workflows/release.yml`: pushing a `v*` tag builds both packages and attaches them to a GitHub release, using the tag message as the release notes. The tag must match the version in `.claude-plugin/plugin.json`.
+Releases are published by `.github/workflows/release.yml`, which builds both packages and attaches them to a GitHub release. Run it from the Actions tab with the tag (e.g. `v0.3.0`) to create that tag at the commit it runs on, or push a `v*` tag. The notes come from `release-notes/<tag>.md` if it exists, else the tag message. The tag must match the version in `.claude-plugin/plugin.json`, and an existing tag must point at the commit the workflow runs on.
 
 ## Disclaimer
 
