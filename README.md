@@ -23,7 +23,7 @@ Anyone dealing with a South African employer dispute who wants Claude to reason 
 
 ## Installing
 
-Install this `.plugin` file in Claude Cowork or Claude Code. Once installed, the skill activates automatically when a conversation matches its domain — no slash command needed.
+Download `za-labour-law-advisor.plugin` from the [latest release](https://github.com/drryltrnr/za-labour-law-advisor/releases/latest) and install it in Claude Cowork or Claude Code. Once installed, the skill activates automatically when a conversation matches its domain — no slash command needed.
 
 ## Disclaimer
 
