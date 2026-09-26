@@ -15,6 +15,8 @@ The skill loads whenever a conversation touches South African labour law — eve
 - **Prescription Act** — when a money claim prescribes and what interrupts it
 - **MEIBC / MIBFA** — sector modules for the metal and engineering industries: bargaining council extension notices, levies, benefit funds and Pension Funds Act s 13A
 
+The MEIBC/MIBFA/Pension Funds Act s 13A detail and the SARS/PAYE/UIF detail live in `skills/za-labour-law-advisor/references/`, loaded only when a matter triggers them, which keeps the core `SKILL.md` about 16% lighter. Package the whole skill folder, not `SKILL.md` alone.
+
 It also plans a worker's exit — stay, resign, or claim constructive dismissal — with each consequence for UIF, the onus of proof and any open claim, and tells the user plainly when a matter needs a practitioner (Legal Aid SA, SASLAW Pro Bono, law clinics).
 
 It's built around a verification discipline: statutory section numbers are easy to cite confidently and wrongly, so the skill instructs Claude to check every citation against primary text before it goes into anything a person will actually sign or serve — and it documents specific, easy-to-make citation mistakes (e.g. COIDA s 63 vs s 47(1)(a)/Schedule 4, the repealed UIA ss 38–41, an unlawful deduction pleaded as an unfair labour practice) so they aren't repeated.
