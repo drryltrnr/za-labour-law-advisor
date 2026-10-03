@@ -1,0 +1,53 @@
+{
+  "skill_name": "za-labour-law-advisor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My employer says they have 30 days to report my injury on duty to the Compensation Fund. Is that right?",
+      "expected_output": "Says no: COIDA s 39(1) gives the employer SEVEN days from notice of the accident, in the prescribed manner (W.Cl.2, or the licensee's form such as RMA's RMD01). Mentions the s 39(6)/(8) penalties read with s 99. Quick-answer mode: no audit-trail table, names what was checked in one line.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I hurt my back at work in February 2025 and never put in a claim. Is it too late?",
+      "expected_output": "Does not say 12 months. States the claim period under s 43 as amended is three years from the accident and that the 2026 Regulations are reported to apply it to earlier accidents; tells Claude/user to read s 43 as substituted and the transitional regulation; computes the resulting date (February 2028) with the working shown; flags that the employer's own s 39 duty may already be breached.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "My boss took R3,000 off my wages to get back what he says he overpaid me while I was on COIDA. Can he do that?",
+      "expected_output": "Audits COIDA s 32(1) (no set-off against compensation) first, then BCEA s 34 including s 34(5), cites NWPL v NEHAWU [2023] ZALAC 12 on self-help clawbacks with an instruction to open it, and does NOT cite COIDA s 64 (wrong direction of money). Recommends the cheapest route (written demand, then labour inspector or s 73A CCMA claim if below the threshold, after fetching the threshold).",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Provident fund money comes off my payslip every month but my fund statement shows nothing paid in for eight months. What can I do?",
+      "expected_output": "Loads meibc-mibfa.md. Identifies three parallel routes: a DEL labour inspector under BCEA s 34A (inspector enforcement for retirement funds since the January 2026 withdrawal of the variation notice), PFA s 13A with the s 13A(8) personal liability of directors and a PFA s 30A Adjudicator complaint, and LRA s 33A where a bargaining council fund agreement binds. Notes the different 7-day counting rules. Does not merge council levies with fund contributions.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "I was dismissed on 14 October 2026. What is the last day I can refer it to the CCMA?",
+      "expected_output": "Computes under LRA s 191(1)(b)(i) and Interpretation Act s 4: exclude 14 October, count 30 days, giving Friday 13 November 2026 (not a Sunday or public holiday). Shows the working, notes the date of dismissal rule in s 190, names the bargaining council instead of the CCMA where one has jurisdiction, and advises filing early.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "I'm a labour broker worker. I've been at the same factory for eight months on R8,000 a month. Who is my employer?",
+      "expected_output": "Fetches the current BCEA s 6(3) earnings threshold before relying on it; applies LRA s 198A(3)(b) (deemed employee of the client once not a temporary service), cites Assign Services v NUMSA [2018] ZACC 22 on the sole-employer reading with an instruction to open it, and keeps joint and several liability under s 198(4)/(4A) distinct from the deeming provision.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "Since I complained about overtime my supervisor keeps cutting my shifts and shouting at me. I want to resign today. Can you write the letter?",
+      "expected_output": "Loads leaving-employment.md and does not draft the resignation first. Applies the sequence rule: document the constructive dismissal elements (s 186(1)(e), onus under s 192(1)), explain the UIF consequence of resigning (UIA s 16(1)(a)), and consider a grievance and an s 186(2) referral or staying. Offers the letter only after those steps, and explains why.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "What is the current BCEA earnings threshold?",
+      "expected_output": "Does not answer from memory. Fetches the current s 6(3) determination, cites its gazette and notice number and effective date, checks for a later correction notice, and reconciles the annual and monthly figures.",
+      "files": []
+    }
+  ]
+}

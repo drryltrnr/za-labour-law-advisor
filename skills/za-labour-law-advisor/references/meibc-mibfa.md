@@ -2,7 +2,7 @@
 
 **Load when:** the employer falls within the MEIBC's registered scope; the matter turns on a bargaining council's binding route, extension or renewal notices, levies or dispute-resolution centre; MIBFA funds are involved; or retirement-fund contributions were deducted but not paid over, in any sector (Pension Funds Act s 13A).
 
-Section numbers below refer to SKILL.md. Run its Section 1 verification on everything in this file before relying on it.
+Section numbers are the skill's section identifiers; SKILL.md Section 0.C shows which file holds each. This file records the law as last verified (`watch-list.md` lists what moves on known dates). Run SKILL.md Section 1 on everything in it before relying on it.
 
 ## E. MEIBC Main Collective Agreement (Metal & Engineering Industries)
 
@@ -30,7 +30,9 @@ Apply Parts E and F where the employer falls within the MEIBC's registered scope
 | **3943 of 2026** | **Pension** Fund | GN R.2214 of 1 July 2022 (GG 46648) |
 | **3944 of 2026** | **Provident** Fund | GN R.2212 of 1 July 2022 (GG 46648) |
 
-Four lessons, each of which cost something to learn:
+**These notices date.** Each 2026 renewal runs for twelve months from publication on 18 May 2026, so the family lapses in May 2027 unless renewed again (`watch-list.md`). After that, this table is a worked example of method, not a statement of what binds — fetch the current notices.
+
+Four lessons:
 
 1. **The Main Agreement was not renewed.** R.2569 sat immediately beside R.2570 and R.2571 in the 2022 gazette; in 2026 the Minister renewed the latter two and left R.2569 alone. Its non-party extension status must therefore be checked on its own and never inferred from the levy or fund agreements.
 2. **One notice, one agreement.** Commentary reporting that "four MEIBC agreements were re-extended" describes four separate notices. Notice 3941 renews RAECA and nothing else.
@@ -57,7 +59,7 @@ MIBFA administers retirement, disability and welfare schemes governed by MEIBC c
   * **7-day rule (s 13A(1))** — amounts deducted must be paid over no later than the 7th day of the month following the month of deduction.
   * **Offence (s 37(1))** — failure to pay over deducted contributions is a criminal offence.
   * **Personal liability (s 13A(8))** — directors, close corporation members and persons managing the employer's financial affairs are personally, jointly and severally liable for unpaid contributions, late-payment interest and penalties. This is often the only route in a payroll dispute that reaches the individuals behind the company; name them.
-* **Enforcement** — (1) LRA s 33A referral to the MEIBC CDR: a collective agreement may authorise a designated agent to issue a compliance order, unresolved compliance disputes go to arbitration, and the arbitrator may order payment, impose a fine within ministerial limits and determine interpretation disputes, the award being final, binding and enforceable through the Labour Court and Sheriff; (2) complaint to the Office of the Pension Funds Adjudicator under PFA s 30A against the employer and the individual directors, an Adjudicator determination being deemed a civil judgment of the High Court.
+* **Enforcement** — (1) LRA s 33A referral to the MEIBC CDR: a collective agreement may authorise a designated agent to issue a compliance order, unresolved compliance disputes go to arbitration, and the arbitrator may order payment, impose a fine within ministerial limits and determine interpretation disputes, the award being final, binding and enforceable through the Labour Court and Sheriff; (2) complaint to the Office of the Pension Funds Adjudicator under PFA s 30A against the employer and the individual directors, an Adjudicator determination being deemed a civil judgment of the High Court; (3) since January 2026, a complaint to a DEL labour inspector under BCEA s 34A, which inspectors may now enforce for retirement-fund contributions by undertaking or compliance order (Section 2.A) — free, and quicker to start than either of the others. Run the routes in parallel where the facts support each, and keep each route's relief separate (Section 5).
 * **Sick Pay Fund and COIDA interplay** — the Sick Pay Fund provides safety-net income during extended incapacity, so an employer cannot force an employee onto unpaid leave while a COIDA temporary total disablement claim is processed.
 * **On termination** — where an employee resigns or is dismissed (Section 3.B), establish the fund withdrawal position and check that every deducted contribution was actually remitted before the member's benefit statement is relied on.
 * **The self-proving audit** — a payslip that shows PAYE, UIF and loan deductions but no fund contribution, and company contributions of the Skills Development Levy and employer UIF only, proves the omission on the employer's own document. Build the complaint on that rather than on the user's account of it.

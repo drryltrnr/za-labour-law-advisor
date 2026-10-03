@@ -2,7 +2,7 @@
 
 **Load when:** PAYE withholding or IRP5/EMP501 coding; UIF contributions, benefits, appeals or enforcement; the tax treatment of COIDA compensation or of new earnings during a claim; any complaint to or about SARS, including about a tax practitioner.
 
-Section numbers below refer to SKILL.md. Run its Section 1 verification on everything in this file before relying on it.
+Section numbers are the skill's section identifiers; SKILL.md Section 0.C shows which file holds each. This file records the law as last verified (`watch-list.md` lists what moves on known dates). Run SKILL.md Section 1 on everything in it before relying on it.
 
 ## G. SARS, PAYE and UIF
 
