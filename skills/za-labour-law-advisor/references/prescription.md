@@ -1,0 +1,11 @@
+# Prescription Act — Money Claims (SKILL.md Section 2.H)
+
+**Load when:** Any money claim — when it prescribes and what interrupts it.
+
+Section numbers are the skill's section identifiers; SKILL.md Section 0.C shows which file holds each. This file records the law as last verified (`watch-list.md` lists what moves on known dates). Run SKILL.md Section 1 on everything in it before relying on it.
+
+## H. Prescription Act 68 of 1969 — money claims
+
+* **The default clock** — save where an Act of Parliament provides otherwise, a debt prescribes after three years (s 11(d)); a judgment debt after thirty (s 11(a)(ii)). Prescription runs from when the debt is due (s 12(1)), but a debt is not due until the creditor knows — or by reasonable care could know — the debtor's identity and the facts from which it arises (s 12(3), as substituted in 1984); it does not start while the debtor wilfully hides the debt (s 12(2)). Chapter III yields to any Act that prescribes its own period for a claim, or conditions for an action, on a debt (s 16(1)).
+* **Stopping it** — an express or tacit acknowledgement of liability interrupts it and the clock restarts (s 14). Service on the debtor of process claiming payment interrupts it (s 15(1)) — "process" includes any document whereby legal proceedings are commenced (s 15(6)) — but the interruption lapses unless the claim is prosecuted to final judgment (s 15(2)). Where the debt is the object of a dispute subjected to arbitration and the period would otherwise end before, or within a year after, that impediment ceases, it runs until a year after it ceases (s 13(1)(f), (i)). An LRA s 145 review application interrupts prescription on the award (s 145(9), for awards issued from 1 January 2015; Section 2.C).
+* **Open questions — resolve from opened case law, not memory** — whether a CCMA or council referral is "process" under s 15, whether an arbitration award or compensation order is a "judgment debt" under s 11(a)(ii), and whether the LRA or EEA referral periods displace Chapter III under s 16(1) for a given claim are case-law questions. Find the current Constitutional Court and Labour Appeal Court authority on SAFLII and open it (Section 1.D) before stating when a labour claim prescribes; meanwhile, diarise the earliest plausible date.

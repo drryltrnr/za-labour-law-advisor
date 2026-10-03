@@ -1,6 +1,6 @@
 {
   "name": "za-labour-law-advisor",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Worker-side strategic analysis, legal text auditing and document drafting for any South African employment dispute under the BCEA, NMWA, LRA, EEA, COIDA, UIA/UIC Act, Prescription Act and SARS rules, CCMA and bargaining council practice, with sector modules for the MEIBC Main Collective Agreement and MIBFA benefit funds.",
   "license": "MIT",
   "keywords": [

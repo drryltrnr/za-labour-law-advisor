@@ -15,7 +15,23 @@ The skill loads whenever a conversation touches South African labour law — eve
 - **Prescription Act** — when a money claim prescribes and what interrupts it
 - **MEIBC / MIBFA** — sector modules for the metal and engineering industries: bargaining council extension notices, levies, benefit funds and Pension Funds Act s 13A
 
-The MEIBC/MIBFA/Pension Funds Act s 13A detail and the SARS/PAYE/UIF detail live in `skills/za-labour-law-advisor/references/`, loaded only when a matter triggers them, which keeps the core `SKILL.md` about 16% lighter. They are part of the skill: the package must contain the whole skill folder (see Installing).
+The core `SKILL.md` holds the method — the working sequence, the verification rules, the traps carried into every matter, escalation and output formats — in about 5,000 words, roughly 60% lighter than v0.3.1. The statute-by-statute detail lives in `skills/za-labour-law-advisor/references/` and is loaded only when a matter triggers it:
+
+| File | Covers |
+| :--- | :--- |
+| `gazette-verification.md` | Search patterns, where to read primary text, citation format, the fetch table for volatile figures |
+| `bcea-nmwa.md` | Hours, pay, deductions and clawbacks, s 34A fund remittance, leave, termination, money-claim forums, minimum wage |
+| `coida.md` | COIDA as amended by Act 10 of 2022 and its 2026 commencement and regulations |
+| `lra-ccma.md` | Dismissal, retrenchment, unfair labour practices, referrals, awards, review, TES |
+| `eea.md` | Discrimination, equal pay, harassment |
+| `meibc-mibfa.md` | MEIBC sector module, MIBFA funds, Pension Funds Act s 13A |
+| `sars-paye-uif.md` | PAYE, UIF, SARS channels |
+| `prescription.md` | When money claims prescribe and what interrupts them |
+| `leaving-employment.md` | Stay, resign or claim constructive dismissal; earning during a COIDA claim |
+| `pleading-hygiene.md` | Checks for anything signed, sworn, filed or served |
+| `watch-list.md` | Items that change on known dates, and points not yet confirmed against primary text |
+
+They are part of the skill: the package must contain the whole skill folder (see Installing). `evals/evals.json` holds test prompts with known answers for checking the skill after an edit; it is not packaged.
 
 It also plans a worker's exit — stay, resign, or claim constructive dismissal — with each consequence for UIF, the onus of proof and any open claim, and tells the user plainly when a matter needs a practitioner (Legal Aid SA, SASLAW Pro Bono, law clinics).
 
