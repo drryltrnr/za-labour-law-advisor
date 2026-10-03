@@ -1,0 +1,14 @@
+{
+  "name": "drryltrnr",
+  "description": "Claude plugins by drryltrnr",
+  "owner": {
+    "name": "drryltrnr"
+  },
+  "plugins": [
+    {
+      "name": "za-labour-law-advisor",
+      "source": "./",
+      "description": "Worker-side analysis and drafting for South African employment disputes: BCEA, LRA, EEA, COIDA, UIF, CCMA and bargaining council practice, with MEIBC and MIBFA sector modules."
+    }
+  ]
+}
