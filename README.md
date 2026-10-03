@@ -43,7 +43,21 @@ Any worker dealing with a South African employer dispute who wants Claude to rea
 
 ## Installing
 
-Download `za-labour-law-advisor.plugin` from the [latest release](https://github.com/drryltrnr/za-labour-law-advisor/releases/latest) and install it in Claude Cowork or Claude Code. Once installed, the skill activates automatically when a conversation matches its domain — no slash command needed.
+Plugins need a paid Claude plan. Once installed, the skill activates automatically when a conversation matches its domain — no slash command needed.
+
+**Recommended: add this repo as a marketplace.** You get updates as they are pushed.
+
+- **Claude Cowork / claude.ai:** open **Customize → Plugins → Add → Add marketplace → Add from a repository**, enter `drryltrnr/za-labour-law-advisor`, then install **za-labour-law-advisor**. Turn on **Sync automatically** to receive updates.
+- **Claude Code:**
+
+  ```
+  /plugin marketplace add drryltrnr/za-labour-law-advisor
+  /plugin install za-labour-law-advisor@drryltrnr
+  ```
+
+**Alternative: install from a file.** Download `za-labour-law-advisor.plugin` from the [latest release](https://github.com/drryltrnr/za-labour-law-advisor/releases/latest) and upload it under **Customize → Plugins** in Claude Cowork, or install it in Claude Code. A file install does not update itself; download the next release to upgrade.
+
+If you previously saved this as a standalone skill (the `.skill` package), turn that skill off after installing the plugin so the two copies don't compete.
 
 To build the packages yourself, run `python3 scripts/build_plugin.py`. It writes `dist/za-labour-law-advisor.plugin` (manifest, README, LICENSE and every file under `skills/`) and `dist/za-labour-law-advisor.skill` (the skill folder alone — `SKILL.md` plus `references/` — for a Claude **Save skill** upload), and refuses to build if `SKILL.md` points to a reference file that is missing.
 
